@@ -1,0 +1,121 @@
+*,::after,::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.main_cotainer {
+    height: 100vh;
+    background-image: url("./img/chalk.jpg");
+    display: flex;
+}
+
+.intro {
+  width: 70%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.intro .myname { 
+    background-image: linear-gradient( -225deg, #b31275 0%, #f0a500 15%, #9055cf 29%, #c813ff 67%, #0059ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 8rem;
+    padding-top: 15%;
+    margin-left: 16%;
+    border-bottom: 1px solid rgb(26, 24, 24);
+    animation: textclip 2s cubic-bezier(.36,.42,.52,.96) infinite;
+    
+}
+@keyframes textclip {
+    100% {
+        background-position: 200% center;
+      }
+}
+
+.main_cotainer p {
+    max-width: 600px;
+    color: white;
+    font-size:1.2rem;
+    line-height:1.7rem;
+    margin-left: 16%;
+    color: #ffffff80;
+    font-family: "Open Sans", sans-serif;
+
+
+}
+.moreme {
+    color: white;
+    font-size: 3.6rem;
+    font-weight: 700;
+    font-family: sans-serif, mono;
+    margin-left: 16%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+.nav_contact-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    color: #ab9090;
+}
+
+nav {
+    display: flex;
+    color: #ab9090;
+    text-align: center;
+}
+nav a { 
+    width: 25%;
+    font-size: 1.2rem;
+    font-family: sans-serif, mono;
+    height: 7vh;
+    margin-top: 3rem;
+}
+
+nav a:focus,
+nav a:hover { color: white; }
+
+.main_contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.main_contact-wrapper a {
+  height: 30%;
+  margin-right: 2%;
+}
+.main_contact-wrapper a:first-of-type { margin-top: 20%; }
+
+.main_contact-wrapper a:hover { opacity: .6; }
+
+#scroll_indicator {
+    position: absolute;
+    top: 77vh;
+    left: 0;
+    color: rgb(231, 236, 231);
+}
+
+.scroll_indicator-path {
+    animation: col 1s linear infinite;
+}
+@keyframes col {
+    0%,51% {fill:white}
+    51%,72% {fill:black}
+    75%,100% {fill:gray}
+    }
+
+.svg {
+    padding-top: 0;
+    animation: MoveUpDown 1.5s linear infinite;
+}
+@keyframes MoveUpDown {
+    0%,50% { padding-top: 3rem; }
+}
