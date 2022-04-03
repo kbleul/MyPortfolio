@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
 *,::after,::after {
     box-sizing: border-box;
     padding: 0;
@@ -23,7 +25,7 @@
     font-weight: 700;
     font-size: 4rem;
     line-height: 8rem;
-    padding-top: 15%;
+    padding-top: 14%;
     margin-left: 16%;
     border-bottom: 1px solid rgb(26, 24, 24);
     animation: textclip 2s cubic-bezier(.36,.42,.52,.96) infinite;
@@ -39,23 +41,73 @@
     max-width: 600px;
     color: white;
     font-size:1.2rem;
-    line-height:1.7rem;
+    line-height:1.8rem;
     margin-left: 16%;
     color: #ffffff80;
     font-family: "Open Sans", sans-serif;
 
 
 }
+
+.animate_wrapper {
+    background-color: #060506;
+    padding-bottom: 6rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.moreme_wrapper {
+    display: flex;
+}
+
 .moreme {
     color: white;
-    font-size: 3.6rem;
+    font-size: 60px;
     font-weight: 700;
     font-family: sans-serif, mono;
     margin-left: 16%;
-    margin-top: 1rem;
+    margin-top: .7rem;
     margin-bottom: 2rem;
 
 }
+
+.moreme_wrapper .dynamic_text-ul {
+    margin-left: 2%;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+.dynamic_text-ul li {
+    list-style: none;
+    color: #ff4c29;
+    font-size: 60px;
+    font-weight: 700;
+    position: relative;
+    top: 0;
+    animation: slide 9s steps(3) infinite;
+
+}
+
+@keyframes slide {
+    100% { top: -270px; }
+}
+
+.dynamic_text-ul li::after {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-left: 3px solid #060506;
+    background-color: #060506;
+    left: 0;
+    animation: typing 3s steps(19) infinite;
+}
+
+@keyframes typing {
+    40%,60% { left : calc(100% + 60px); }
+    100% { left: 0; }
+}
+
+.aboutme_p { color: white; }
 
 .nav_contact-container {
     width: 30%;
@@ -103,9 +155,8 @@ nav a:hover { color: white; }
     color: rgb(231, 236, 231);
 }
 
-.scroll_indicator-path {
-    animation: col 1s linear infinite;
-}
+.scroll_indicator-path { animation: col 1s linear infinite; }
+
 @keyframes col {
     0%,51% {fill:white}
     51%,72% {fill:black}
@@ -116,6 +167,52 @@ nav a:hover { color: white; }
     padding-top: 0;
     animation: MoveUpDown 1.5s linear infinite;
 }
-@keyframes MoveUpDown {
-    0%,50% { padding-top: 3rem; }
+@keyframes MoveUpDown {  0%,50% { padding-top: 3rem; }  }
+
+/*********Skills *********/
+
+.main_cotainer-skills { 
+    height: 100vh;
+    background-color: #1f1d1d;
+    padding-top: 2%;
+}
+
+.skills_card-wrapper { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15% 10%;
+    width: 80%;
+    margin-left: 10%;
+    border: 1px solid red;
+    height: 50%;
+    color: #f0a500;
+}
+
+.skill_card {
+    border: 2px solid #f0a500;
+    border-radius: 50%;
+    width: 80%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills_card-wrapper .skills_svg {
+    width: 3rem;
+    height: 5rem;
+    animation : spin 1.2s linear infinite;
+}
+
+.skill_title { 
+    font-family: 'Roboto Mono', monospace;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
