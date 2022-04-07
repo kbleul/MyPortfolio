@@ -248,7 +248,7 @@ nav a:hover { color: white; }
     transition: all 1s ease;
 }
 .show_sidemenu-btn--wrapper---active {
-    height: 11rem;
+    height: 13rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -348,7 +348,7 @@ nav a:hover { color: white; }
 }
 
 /********* project *********/
-.main_container-program {
+.main_container-projects {
     height: 100vh;
     background: linear-gradient(#000,#212428);
     margin-top: 7%;
@@ -367,14 +367,20 @@ nav a:hover { color: white; }
     }
 }
 
-.program_flex-container .sidemenu { width: 10%; }
+.program_flex-container .sidemenu { width: 15%; }
+
+.program_right { 
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: 5%;
+}
 
 .program_main-wrapper { 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5% 10%;
-    width: 80%;
-    margin-left: 5%;
+    
 }
 
 .program_title-wrapper h1 {
@@ -420,4 +426,108 @@ nav a:hover { color: white; }
     height: 16rem;
     object-fit: contain; 
 }
- 
+
+.program_btns-section { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff004f;
+    margin-top: 4%;
+}
+.projects_hidden { display: none; }
+
+.program_btns-section input{ 
+    margin-right: 1rem;
+    accent-color: black;
+}
+
+/*-------Contacts ---------------------*/
+.main_container-contact {
+    height: 100vh;
+    background-color: #333538;
+    background: linear-gradient(#000, #333538);
+    margin-top: 4rem;
+}
+
+.sidemenu_container {
+    height: 95vh;
+    width: 20%;
+}
+
+.form_container {
+    border: 1px solid yellow;
+    height: 95vh;
+    width: 80%;
+
+}
+
+.form_container h2{
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 5%;
+    opacity: .6;
+
+}
+
+.form_container form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.form_container label {
+    color: white;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    font-size: 1.1rem;
+    margin-left: 15%;
+    
+}
+
+.contacts_icons-container{
+    width: 40%;
+    border: 1px solid blue;
+}
+.contacts_container input,
+.contacts_container textarea {
+    display: block;
+    padding: 1rem;
+    width: 70%;
+    outline: none;
+    color: #fdfafa;
+    background-color: inherit;
+    border: 1px solid aqua;
+    border-radius: .3rem;
+    font-weight: bold;
+    margin-left: 15%;
+}
+
+.contacts_container textarea {
+    font-family: cursive;
+    font-size: 1.3rem;
+}
+
+.contacts_container input:hover,
+.contacts_container textarea:hover,
+.contacts_container input:focus,
+.contacts_container textarea:focus {
+    border-radius: .5rem;
+}
+#send {
+    width: 40%;
+    margin-left:30%;
+    margin-top: 10%;
+    transition: all 1s ease;
+}
+
+#send:hover {
+    color: white;
+    font-size: .9rem;
+    padding: .7rem .5rem;
+    margin-left:35%;
+    width: 30%;
+    background-color: rgb(19, 16, 16);
+    border: none;
+
+}
