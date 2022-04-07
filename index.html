@@ -36,6 +36,8 @@
             <nav>
                 <a href="#main_container-skills">Skills</a>
                 <a href="#main_container-projects">Projects</a>
+                <a href="#main_container-contacts">Contact</a>
+
                 <a>Resume</a>
             </nav>
 
@@ -98,6 +100,9 @@
                 </button>
                 <button class="show_sidemenu_btn">
                     <p><a href="#main_container-projects">Projects</a></p>
+                </button>
+                <button class="show_sidemenu_btn">
+                    <p><a href="#main_container-contacts">Contact</a></p>
                 </button>
                 <button class="show_sidemenu_btn">
                     <p>Resume</p>
@@ -223,7 +228,7 @@
         </section>
     </article>
 
-    <article class="main_container-projects" id="main_container-projects">
+    <article class="main_container-projects" id="main_container-projects" >
         <section class="program_wrapper">
             <div class="program_title-wrapper">
                 <h1>Projects</h1>
@@ -250,11 +255,12 @@
                         <button class="show_sidemenu_btn">
                             <p><a href="#main_container-skills">Skills</a></p>
                         </button>
+                    
                         <button class="show_sidemenu_btn">
-                            <p>Resume</p>
+                            <p><a href="#main_container-contacts">Contact</a></p>
                         </button>
                         <button class="show_sidemenu_btn">
-                            <p><a href="#main_container-contacts">Contacts</a></p>
+                            <p><a>Resume</a></p>
                         </button>
                     </div>
                 </section>
@@ -309,12 +315,12 @@
         </section>
     </article>
 
-    <article class="main_container-contact">
+    <article class="main_container-contact" id="main_container-contacts">
         <section class="contacts_container flex">
             <div class="sidemenu_container">
-                <section class="sidemenu reveal fade-bottom">
+                <section class="sidemenu reveal fade-left">
 
-                    <button id="show_sidemenu-project">
+                    <button id="show_sidemenu-contact">
                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3em" height="3em"
                             preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                             <g class="show_sidemenu_path" fill="currentColor">
@@ -326,7 +332,7 @@
                             </g>
                         </svg>
                     </button>
-                    <div class="show_sidemenu-btn--wrapper" id="show_sidemenu-btn--wrapper---project">
+                    <div class="show_sidemenu-btn--wrapper" id="show_sidemenu-btn--wrapper---contact">
                         <button class="show_sidemenu_btn">
                             <p><a href="#main_cotainer">Home</a></p>
                         </button>
@@ -334,23 +340,23 @@
                             <p><a href="#main_container-skills">Skills</a></p>
                         </button>
                         <button class="show_sidemenu_btn">
-                            <p>Resume</p>
+                            <p><a href="#main_container-projects">Projects</a></p>
                         </button>
                         <button class="show_sidemenu_btn">
-                            <p><a href="#main_container-contacts">Contacts</a></p>
+                            <p><a>Resume</a></p>
                         </button>
                     </div>
                 </section>
             </div>
             <section class="form_container">
-                <h2>Let's Connect</h2>
+                <h2 class="reveal fade-bottom">Let's Connect</h2>
                 <div class="flex">
                     
                   
 
-                    <section class="contacts_icons-container">
+                    <section id="contacts_icons-container" class="contacts_icons-container reveal fade-left">
                         <a>
-                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em"
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em"
                                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64">
                                 <path fill="red" d="M32 0C14 0 0 14 0 32c0 21 19 30 22 
                             30c2 0 2-1 2-2v-5c-7 2-10-2-11-5c0 0 0-1-2-3c-1-1-5-3-1-3c3 0 5 4 5 4c3 4 7 3 9 2c0-2 2-4 2-4c-8-1-14-4-14-15c0-4 1-7 3-9c0 
@@ -359,7 +365,7 @@
                             </svg>
                         </a>
                         <a>
-                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em"
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5m"
                                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                                 <path fill="white" fill-rule="evenodd"
                                     d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 
@@ -370,7 +376,7 @@
                         </a>
                         <p>kbleulseged@gmail.com</p>
                     </section>
-                    <form action="mailto:kbleulseged@gmail.com" method="get">
+                    <form action="mailto:kbleulseged@gmail.com" method="POST" class="reveal fade-left">
                         <label for="name">Name *</label>
                         <input type="text" name="name" id="name" placeholder="Name" required="required" >
                         <label for="email">Email *</label>
@@ -383,7 +389,7 @@
                 </div>
             </section>
         </section>
-        <footer></footer>
+        <footer><p>2022. All Right Reserved</p></footer>
 
     </article>
 
@@ -397,7 +403,7 @@
                 document.getElementById("show_sidemenu-btn--wrapper").classList.add("show_sidemenu-btn--wrapper");
 
             } 
-        } else {  
+        } else if(type === "projects"){  
             if (document.getElementById("show_sidemenu-btn--wrapper---project").classList.contains("show_sidemenu-btn--wrapper")) {
                 document.getElementById("show_sidemenu-btn--wrapper---project").classList.remove("show_sidemenu-btn--wrapper");
                 document.getElementById("show_sidemenu-btn--wrapper---project").classList.add("show_sidemenu-btn--wrapper---active");
@@ -406,8 +412,29 @@
                 document.getElementById("show_sidemenu-btn--wrapper---project").classList.add("show_sidemenu-btn--wrapper");
 
         }
+        } else{  
+            if (document.getElementById("show_sidemenu-btn--wrapper---contact").classList.contains("show_sidemenu-btn--wrapper")) {
+                document.getElementById("show_sidemenu-btn--wrapper---contact").classList.remove("show_sidemenu-btn--wrapper");
+                document.getElementById("show_sidemenu-btn--wrapper---contact").classList.add("show_sidemenu-btn--wrapper---active");
+
+                document.getElementById("contacts_icons-container").classList.remove("contacts_icons-container");
+                document.getElementById("contacts_icons-container").classList.add("contacts_icons-container--col");
+            } else {
+                document.getElementById("show_sidemenu-btn--wrapper---contact").classList.remove("show_sidemenu-btn--wrapper---active");
+                document.getElementById("show_sidemenu-btn--wrapper---contact").classList.add("show_sidemenu-btn--wrapper");
+
+                document.getElementById("contacts_icons-container").classList.remove("contacts_icons-container--col");
+                document.getElementById("contacts_icons-container").classList.add("contacts_icons-container");
+
+        }
         }
     }
+
+        document.getElementById("show_sidemenu").addEventListener("click", () => showSideMenu("skills"));
+        document.getElementById("show_sidemenu-project").addEventListener("click", () => showSideMenu("projects"));
+        document.getElementById("show_sidemenu-contact").addEventListener("click", () => showSideMenu("contacts"));
+
+        
 
     const showNextProjects = (type) => {
           if( type === "next") { 
@@ -419,8 +446,7 @@
                 document.getElementById("front-projects").classList.remove("projects_hidden");
         };
     }
-        document.getElementById("show_sidemenu").addEventListener("click", () => showSideMenu("skills"));
-        document.getElementById("show_sidemenu-project").addEventListener("click", () => showSideMenu("project"));
+       
 
 
         function reveal() {
@@ -443,6 +469,7 @@
 
         document.getElementById("next").addEventListener("click", () => { showNextProjects("next"); })
         document.getElementById("previous").addEventListener("click", () => { showNextProjects("previous"); })
+        document.getElementById("previous").checked = true; 
 
     </script>
 </body>
