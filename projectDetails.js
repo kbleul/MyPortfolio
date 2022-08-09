@@ -1,14 +1,73 @@
 
 const DETAILS = {
     0 : { 
-        title : "Morbik-Movies",
-        discription : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias aliquid dolores fuga illum error numquam quasi veniam quisquam fugit. Odit quae molestias assumenda dolores ex cum explicabo, eligendi doloremque placeat laudantium, nisi soluta animi quo unde, accusamus est recusandae sed reiciendis. Ut reprehenderit praesentium officiis harum reiciendis, consectetur dolore! Iusto, in voluptatibus placeat sed eveniet blanditiis reiciendis illum fuga fugit corporis, vel quisquam voluptate neque quae facere maxime maiores minus id ducimus nobis architecto tempore veniam. Sapiente, in tempore eum, adipisci voluptatibus delectus modi facilis sunt labore hic illum ut officiis quia fugiat repellendus aspernatur! Perferendis consequatur laboriosam numquam error?" ,
+        title : "Morbik-Fitness",
+        discription : [`This project utilized exerciseDB api from rapid api to show diffrent exercises. The exercises can be filtered and searched by different body parts. It also suggest d/t youtube videos that are similar to the current exercise by using the Youtube Search and Download api, also found in rapid api.`,
+        `Has a dark mode option and is fully responsive `,
 
-        imgs : ["img/project_imgs/movies.png","img/project_imgs/movies.png","img/project_imgs/movies.png","img/project_imgs/movies.png"] , 
+       `What did i learn more about by building this project ?`,
+
+         `- React building custom hooks` ,
+         `- Advanced React Best Practices such as file structure and hooks`,
+         `- Creating a beautiful user interface using the Material UI (version 5)`,
+         `- Fetching data from unlimited sources using RapidAPI`],
+
+        imgs : ["img/project_imgs/fitness.png","img/project_imgs/fitness1.png","img/project_imgs/fitness2.png","img/project_imgs/fitness3.png"] , 
+
+        link : "https://morbik-fitness.netlify.app/"
+     },
+
+    1 : {
+        title : "Morbik-Recipe",
+        discription : [`This project utilized TheMealDB and CocktailDB  APIs to show diffrent recipes from around the world. The exercises can be filtered  different catagories. It also suggest d/t subreddits that are mainly about foodor cocktails..`,
+        `Has a dark mode functionality and user can also save their favorite recipes and subreddits. The site is fully responsive `,
+
+       `What did i learn more about by building this project ?`,
+
+         `- A deeper understanding if react routers` ,
+         `-  A deeper understanding on managing states globaly using useContext hook`,
+         `- Creating a beautiful user interface using tailwindcss`,
+         `- Using local storage to persist aved data`,
+         `- Fetching data from unlimited sources using APIs`
+        ],
+
+        imgs : ["img/project_imgs/recipe1.png","img/project_imgs/recipe2.png","img/project_imgs/recipe3.png","img/project_imgs/recipe4.png"] , 
+
+        link : "https://morbikrecipe.netlify.app"
+     },
+
+     2 : {
+        title : "Morbik-Movies",
+        discription : [`This project utilized theMovieDB api show diffrent movies and series and user can get a movie recomendation based on a similar movies thry have seen before. The movies can be filtered and searched by movie title. It also suggest d/t movie subreddits that discuss movies by using the reddit api, also found in rapid api.`,
+        `It's fully responsive `,
+
+       `What did i learn more about by building this project ?`,
+
+         `- Using hooks like useMediaQuery` ,
+         `- Interacting with an api`,
+         `- Creating a beautiful user interface `,
+         `- Fetching data from unlimited sources`],
+
+        imgs : ["img/project_imgs/movies.png","img/project_imgs/movies1.png","img/project_imgs/movies2.png","img/project_imgs/movies3.png"] , 
 
         link : "https://morbik-movies.netlify.app"
+      },
 
+    3 : {
+        title : `Morbik-Fitness`,
+        discription : [`This project utilized exerciseDB api from rapid api to show diffrent exercises. The exercises can be filtered and searched by different body parts. It also suggest d/t youtube videos that are similar to the current exercise by using the Youtube Search and Download api, also found in rapid api.`,
+         `Has a dark mode option and is fully responsive `,
 
+        `What did i learn more about by building this project ?`,
+
+          `- React building custom hooks` ,
+          `- Advanced React Best Practices such as file structure and hooks`,
+          `- Creating a beautiful user interface using the Material UI (version 5)`,
+          `- Fetching data from unlimited sources using RapidAPI`],
+
+        imgs : ["img/project_imgs/fitness.png","img/project_imgs/fitness1.png","img/project_imgs/fitness2.png","img/project_imgs/fitness3.png"] , 
+
+        link : "https://morbik-movies.netlify.app"
     }
 }
 
@@ -18,11 +77,15 @@ const DETAILS = {
 const showDetails = index => {
 
     const htmlobj = document.getElementsByClassName("program_card")[index];
-        const title = htmlobj.querySelector("h3")
-        const tech = htmlobj.querySelector("p")
+        const title = document.createElement("h3")
+        const tech = document.createElement("p")
 
             title.classList = "projectTitle"
             tech.classList = "tags"
+
+            title.innerHTML =  htmlobj.querySelector("h3").innerHTML
+            tech.innerHTML =  htmlobj.querySelector("p").innerHTML
+
 
     if(DETAILS[index]) {
 
@@ -59,14 +122,21 @@ const showDetails = index => {
             divimgs.appendChild(linkbtn)
 
 
-        const disc_para = document.createElement("p")
-                    disc_para.innerHTML = DETAILS[index].discription
+            let p_sec = document.createElement("section")
 
+            for(let i = 0 ; i < DETAILS[index].discription.length ; i++)
+                  {
+                    const disc_para = document.createElement("p")
+                          disc_para.innerHTML = DETAILS[index].discription[i]
+                          p_sec.appendChild(disc_para)
+                  }     
+
+                  p_sec.classList = "discr_sec"
 
             div.appendChild(backbtn)
             div.appendChild(title)
             div.appendChild(tech)
-            div.appendChild(disc_para)
+            div.appendChild(p_sec)
 
         const article = document.createElement("article")
 
@@ -74,8 +144,6 @@ const showDetails = index => {
 
         article.appendChild(div)
         article.appendChild(divimgs)
-
-        // TEMP_STORAGE = document.getElementById("skills_article").innerHTML
 
       for(let i = 0 ; i < document.getElementsByClassName("program_main-wrapper").length ; i++) {  
           document.getElementsByClassName("program_main-wrapper")[i].classList.add("projects_hidden")
