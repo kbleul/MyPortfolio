@@ -2,8 +2,13 @@
 
 #project_disc {
     display: flex;
-    margin-top: 8%;
+    margin-top: 3%;
+    max-height: 78vh;
+    overflow-y: hidden;
 }
+
+#project_disc:hover { overflow-y: scroll; }
+
 
 #project_disc div:first-of-type {
     width: 40%;
@@ -62,4 +67,28 @@ a.projectlink:hover {
  }
 
 
-.discr_sec p { padding: .3rem; }
+.discr_sec p { 
+    padding: .3rem; 
+    line-height: 1.5rem;
+}
+
+#loading_container { 
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center
+}
+
+#loading_img { 
+    width: 2rem;
+    height: 2rem;
+}
+
+#send_result { 
+    color: red;
+    text-align: center; 
+    font-size : 1rem;
+    font-family: cursive;
+    display: none;
+    margin-top: .4rem;
+}

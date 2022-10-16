@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="index.css">
     <link type="text/css" rel="stylesheet" href="projectDetails.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <title>Kibrom Leulseged</title>
 </head>
@@ -36,15 +37,15 @@
         </section>
         <section class="nav_contact-container">
             <nav>
-                <a href="#skills">Skills</a>
-                <a href="#main_container-projects">Projects</a>
-                <a href="#main_container-contacts">Contact</a>
+                <a href="#skills" target = "_blank">Skills</a>
+                <a href="#main_container-projects" target = "_blank">Projects</a>
+                <a href="#main_container-contacts" target = "_blank">Contact</a>
 
-                <a>Resume</a>
+                <a target = "_blank">Resume</a>
             </nav>
 
             <div class="main_contact-wrapper">
-                <a>
+                <a href="https://github.com/kbleul" target = "_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em"
                         preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64">
                         <path fill="red" d="M32 0C14 0 0 14 0 32c0 21 19 30 22 
@@ -53,7 +54,7 @@
                     22-30C64 14 50 0 32 0Z" />
                     </svg>
                 </a>
-                <a>
+                <a target = "_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em"
                         preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                         <path fill="white" fill-rule="evenodd"
@@ -63,7 +64,7 @@
                         10.403h3.208V9.25H4.208v10.54ZM7.875 5.812a2.063 2.063 0 1 1-4.125 0a2.063 2.063 0 0 1 4.125 0Z" clip-rule="evenodd" />
                     </svg>
                 </a>
-                <a>
+                <a target = "_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em"
                         preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024">
                         <path fill="yellow" d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3
@@ -98,13 +99,13 @@
             </button>
             <div class="show_sidemenu-btn--wrapper---active" id="show_sidemenu-btn--wrapper">
                 <button class="show_sidemenu_btn">
-                    <p><a href="#main_cotainer">Home</a></p>
+                    <p><a href="#main_cotainer" target = "_blank">Home</a></p>
                 </button>
                 <button class="show_sidemenu_btn">
-                    <p><a href="#main_container-projects">Projects</a></p>
+                    <p><a href="#main_container-projects" target = "_blank">Projects</a></p>
                 </button>
                 <button class="show_sidemenu_btn">
-                    <p><a href="#main_container-contacts">Contact</a></p>
+                    <p><a href="#main_container-contacts" target = "_blank">Contact</a></p>
                 </button>
                 <button class="show_sidemenu_btn">
                     <p>Resume</p>
@@ -115,16 +116,6 @@
         <section id="main_container-skills" class="skills_card-main--container  reveal fade-bottom">
             <h2>Main Skills</h2>
             <section class="skills_card-wrapper">
-                <div class="skill_card">
-                    <div class="icon_wrapper">
-                        <i><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="skills_svg"
-                                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                <path fill="#f0a500"
-                                    d="M20.87 2.162A.5.5 0 0 0 20.5 2h-17a.5.5 0 0 0-.498.544l1.5 17a.5.5 0 0 0 .36.437l6.99 2a.51.51 0 0 0 .275 0l7.01-2a.5.5 0 0 0 .361-.437l1.5-17a.5.5 0 0 0-.129-.382zm-2.338 16.951L11.99 20.98l-6.522-1.866L4.046 3h15.908l-1.422 16.113zM7.96 7.5h7.534l-.266 3H10a.5.5 0 0 0 0 1h5.139l-.345 3.883l-2.794.635l-2.794-.635l-.128-1.428a.513.513 0 0 0-.543-.453a.5.5 0 0 0-.453.543l.16 1.79a.5.5 0 0 0 .388.442l3.26.74a.487.487 0 0 0 .22 0l3.26-.74a.5.5 0 0 0 .388-.443l.426-4.803c0-.01.006-.02.006-.031l-.002-.012l.35-3.944a.5.5 0 0 0-.498-.544H7.96a.5.5 0 1 0 0 1z" />
-                            </svg></i>
-                    </div>
-                    <p class="skill_title">HTML5</p>
-                </div>
                 <div class="skill_card">
                     <div class="icon_wrapper">
                         <i><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="skills_svg"
@@ -157,6 +148,12 @@
                             </svg></i>
                     </div>
                     <p class="skill_title">ReactJS</p>
+                </div>
+                <div class="skill_card">
+                    <div class="icon_wrapper">
+                        <i><svg xmlns="http://www.w3.org/2000/svg" class="skills_svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="currentColor" d="M21.3 6a.3.3 0 0 0-.3.3v5.497l-1.246-.727a.499.499 0 0 0-.508 0l-2.994 1.746a.504.504 0 0 0-.252.436v3.496c0 .18.096.346.252.436l2.994 1.746a.499.499 0 0 0 .508 0l2.994-1.746a.504.504 0 0 0 .252-.436V7.23a.501.501 0 0 0-.248-.431l-1.303-.758A.295.295 0 0 0 21.301 6zm-9.8 5.002a.506.506 0 0 0-.254.068l-2.994 1.746a.504.504 0 0 0-.252.436v3.496c0 .18.096.346.252.436l2.994 1.746c.157.09.35.09.508 0l2.994-1.746a.504.504 0 0 0 .252-.436v-3.496a.502.502 0 0 0-.252-.436l-2.994-1.746a.506.506 0 0 0-.254-.068zm16 0a.499.499 0 0 0-.254.068l-2.994 1.746a.504.504 0 0 0-.252.436v3.496c0 .18.096.346.252.436l2.904 1.755a.498.498 0 0 0 .51.004l1.428-.83a.224.224 0 0 0 0-.386L26 15.904V14.11l1.5-.873l1.5.873v1.25c0 .167.14.193.234.137a544.12 544.12 0 0 1 1.518-.883a.5.5 0 0 0 .248-.431v-.93a.502.502 0 0 0-.252-.436l-2.994-1.746a.502.502 0 0 0-.254-.068zm-24 .002a.499.499 0 0 0-.254.068L.252 12.816a.507.507 0 0 0-.252.438v4.463c0 .218.236.353.424.244l1.328-.773A.501.501 0 0 0 2 16.756v-2.643l1.5-.875l1.5.875v2.643a.5.5 0 0 0 .248.431l1.328.774A.282.282 0 0 0 7 17.717v-4.463a.507.507 0 0 0-.252-.438l-2.994-1.744a.499.499 0 0 0-.254-.068zm16 2.232l1.5.875v1.778l-1.5.875l-1.5-.875V14.11l1.5-.875zm8 .768l-.857.5v.998L27.5 16l.857-.498v-.998l-.857-.5zm-12.094 3.994a.605.605 0 0 0-.297.076L12.297 19.7a.586.586 0 0 0-.297.512v3.246c0 .209.117.406.297.512l.74.422c.355.175.486.175.647.175c.53 0 .832-.317.832-.877v-3.207a.082.082 0 0 0-.082-.084h-.356a.084.084 0 0 0-.084.084v3.207c0 .243-.257.493-.676.284l-.77-.444a.09.09 0 0 1-.042-.074V20.21c0-.029.014-.063.043-.078l2.812-1.621a.091.091 0 0 1 .088 0l2.815 1.62c.029.016.043.045.043.079v3.246a.093.093 0 0 1-.043.078l-2.815 1.627a.091.091 0 0 1-.088 0l-.718-.428c-.02-.01-.05-.015-.069-.005a1.684 1.684 0 0 1-.424.195c-.049.015-.115.045.026.123l.933.555a.642.642 0 0 0 .297.078a.545.545 0 0 0 .293-.082l2.813-1.627a.586.586 0 0 0 .297-.512v-3.246a.603.603 0 0 0-.297-.512l-2.813-1.625a.584.584 0 0 0-.293-.076zm4.387 1.498a.54.54 0 1 0 .002 1.08a.54.54 0 0 0-.002-1.08zm-.006.086c.254 0 .46.2.46.453a.467.467 0 0 1-.46.46a.456.456 0 0 1-.451-.46a.45.45 0 0 1 .451-.453zm-.197.147v.607h.115v-.242h.108c.044 0 .054.018.064.052c0 .005.018.163.023.192h.125a.715.715 0 0 1-.029-.162c-.014-.078-.018-.132-.101-.137c.044-.015.117-.038.117-.15c0-.161-.14-.16-.213-.16h-.21zm.115.097h.098c.03 0 .088 0 .088.082c0 .034-.015.09-.094.088h-.092v-.17zm-3.545.496c-.803 0-1.28.343-1.28.907c0 .618.478.783 1.247.86c.92.093.992.225.992.405c0 .316-.254.447-.848.447c-.745 0-.908-.184-.962-.554c-.005-.04-.04-.069-.084-.069h-.366a.082.082 0 0 0-.082.084c0 .472.258 1.037 1.489 1.037c.903 0 1.414-.35 1.414-.964c0-.608-.41-.77-1.276-.887c-.876-.117-.963-.176-.963-.381c0-.17.072-.393.72-.393c.578 0 .794.127.882.516c.01.04.037.063.076.063h.365c.024 0 .045-.01.059-.024c.015-.019.024-.038.02-.062c-.058-.672-.502-.985-1.403-.985z"/></svg></i>
+                    </div>
+                    <p class="skill_title">NodeJS/express</p>
                 </div>
                 <div class="skill_card">
                     <div class="icon_wrapper">
@@ -252,63 +249,60 @@
                     </button>
                     <div class="show_sidemenu-btn--wrapper" id="show_sidemenu-btn--wrapper---project">
                         <button class="show_sidemenu_btn">
-                            <p><a href="#main_cotainer">Home</a></p>
+                            <p><a href="#main_cotainer" target = "_blank">Home</a></p>
                         </button>
                         <button class="show_sidemenu_btn">
-                            <p><a href="#skills">Skills</a></p>
+                            <p><a href="#skills" target = "_blank">Skills</a></p>
                         </button>
                     
                         <button class="show_sidemenu_btn">
-                            <p><a href="#main_container-contacts">Contact</a></p>
+                            <p><a href="#main_container-contacts" target = "_blank">Contact</a></p>
                         </button>
                         <button class="show_sidemenu_btn">
-                            <p><a>Resume</a></p>
+                            <p><a target = "_blank">Resume</a></p>
                         </button>
                     </div>
                 </section>
-
 
 
                 <article id="skills_article" class="program_right">
     
                     <section id="front-projects" class="program_main-wrapper">
                         <div onClick='showDetails(0)'   class="program_card reveal fade-right main_three">
+                            <img src="img/project_imgs/social1.png" alt="A fintness website.">
+                            <h3>Morbik Social</h3>
+                            <p>#reactjs #tailwind #nodejs #express #web sockets #jsonwebtoken #Cloudinary file hosting </p>
+                        </div>
+                        <div onClick='showDetails(1)'   class="program_card reveal fade-right main_three">
                             <img src="img/project_imgs/fitness.png" alt="A fintness website.">
                             <h3>Morbik Fitness</h3>
                             <p>#reactjs #css3 #api #material ui #netlify</p>
                         </div>
-                        <div onClick='showDetails(1)'  class="program_card reveal fade-right main_three">
+                        <div onClick='showDetails(2)'  class="program_card reveal fade-right main_three">
                             <img src="img/project_imgs/recipe.png" alt="A recipe website.">
                             <h3>Morbik Recipe</h3>
                             <p>#reactjs #tailwind #redditapi #themealdb api #thecocktaildb api #netlify</p>
-                        </div>
-                        <div onClick='showDetails(2)'  class="program_card reveal fade-right main_three">
+                        </div>                  
+                    </section>
+
+                    <section id="next-projects" class="program_main-wrapper projects_hidden">
+                        <div onClick='showDetails(3)' class="program_card fade-right main_three">
                             <img src="img/project_imgs/movies.png" alt="A movie Website.">
                             <h3>Morbik Movies</h3>
                             <p>#reactjs #css3 #html5 #themoviedatabase #reddit api #netlify</p>
-                        </div>
-                   
-                       
-                    </section>
-                    <section id="next-projects" class="program_main-wrapper projects_hidden">
-                        <div  class="program_card reveal fade-right main_three">
-                            <img src="img/project_imgs/artis.png" alt="A Art Gallary Website.">
+                        </div>   
+                        <div onClick='showDetails(4)' class="program_card reveal fade-right main_three">
+                            <img src="img/project_imgs/artis1.png" alt="A Art Gallary Website.">
                             <h3>Artis</h3>
                             <p>#reactjs #css3 #html5 #netlify</p>
                         </div>
-                        <div  class="program_card reveal fade-right ">
+                        <div class="program_card reveal fade-right ">
                             <h5>Curruntly Working On </h5>
                             <img src="img/project_imgs/seka.png" alt="Seka cards game.">
                             <h3>Seka Card Game</h3>
                             <p>#Javascript #css3 #html5 #jquery</p>
                         </div>
-                        <div  class="program_card reveal fade-right ">
-                            <h5>Curruntly Working On </h5>
-                            <img src="img/project_imgs/gym1.png" alt="Gym Managment System.">
-                            <h3>Morbik Gym Managment System</h3>
-                            <p>#javascript #css #ajax #ajax #php #mysql</p>
-                        </div>
-    
+
                     </section>
 
                     <section id="program_btns-section" class="program_btns-section">
@@ -316,7 +310,6 @@
                         <input type="radio" name="main_program-btn" value="previous" id="next">
                     </section>
                 </article>
-
 
             </section>
         </section>
@@ -341,58 +334,64 @@
                     </button>
                     <div class="show_sidemenu-btn--wrapper" id="show_sidemenu-btn--wrapper---contact">
                         <button class="show_sidemenu_btn">
-                            <p><a href="#main_cotainer">Home</a></p>
+                            <p><a href="#main_cotainer" target = "_blank">Home</a></p>
                         </button>
                         <button class="show_sidemenu_btn">
-                            <p><a href="#skills">Skills</a></p>
+                            <p><a href="#skills" target = "_blank">Skills</a></p>
                         </button>
                         <button class="show_sidemenu_btn">
-                            <p><a href="#main_container-projects">Projects</a></p>
+                            <p><a href="#main_container-projects" target = "_blank">Projects</a></p>
                         </button>
                         <button class="show_sidemenu_btn">
-                            <p><a>Resume</a></p>
+                            <p><a target = "_blank">Resume</a></p>
                         </button>
                     </div>
                 </section>
             </div>
             <section class="form_container">
-                <h2 class="reveal fade-bottom">Let's Connect</h2>
-                <div class="flex">
-                    
-                  
+                <div class="flex-contact">
 
-                    <section id="contacts_icons-container" class="contacts_icons-container reveal fade-left">
-                        <a>
-                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em"
-                                preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64">
-                                <path fill="red" d="M32 0C14 0 0 14 0 32c0 21 19 30 22 
-                            30c2 0 2-1 2-2v-5c-7 2-10-2-11-5c0 0 0-1-2-3c-1-1-5-3-1-3c3 0 5 4 5 4c3 4 7 3 9 2c0-2 2-4 2-4c-8-1-14-4-14-15c0-4 1-7 3-9c0 
-                            0-2-4 0-9c0 0 5 0 9 4c3-2 13-2 16 0c4-4 9-4 9-4c2 7 0 9 0 9c2 2 3 5 3 9c0 11-7 14-14 15c1 1 2 3 2 6v8c0 1 0 2 2 2c3 0 22-9 
-                            22-30C64 14 50 0 32 0Z" />
-                            </svg>
-                        </a>
-                        <a>
-                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5m"
-                                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                <path fill="white" fill-rule="evenodd"
-                                    d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 
-                                1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838Zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634c3.169 0 3.92 
-                                1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8c-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388Zm-5.5 
-                                10.403h3.208V9.25H4.208v10.54ZM7.875 5.812a2.063 2.063 0 1 1-4.125 0a2.063 2.063 0 0 1 4.125 0Z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <p>kbleulseged@gmail.com</p>
-                    </section>
-                    <form action="mailto:kbleulseged@gmail.com" method="POST" class="reveal fade-left">
+                    
+                    <article class="flex contact-avater-cont">
+                     <h2 class="reveal fade-bottom">Let's Connect</h2>
+
+                        <section id="contacts_icons-container" class="contacts_icons-container reveal fade-left">
+                            <a href="https://github.com/kbleul" target = "_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64">
+                                    <path fill="red" d="M32 0C14 0 0 14 0 32c0 21 19 30 22 
+                                30c2 0 2-1 2-2v-5c-7 2-10-2-11-5c0 0 0-1-2-3c-1-1-5-3-1-3c3 0 5 4 5 4c3 4 7 3 9 2c0-2 2-4 2-4c-8-1-14-4-14-15c0-4 1-7 3-9c0 
+                                0-2-4 0-9c0 0 5 0 9 4c3-2 13-2 16 0c4-4 9-4 9-4c2 7 0 9 0 9c2 2 3 5 3 9c0 11-7 14-14 15c1 1 2 3 2 6v8c0 1 0 2 2 2c3 0 22-9 
+                                22-30C64 14 50 0 32 0Z" />
+                                </svg>
+                            </a>
+                            <a target = "_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5m"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path fill="white" fill-rule="evenodd"
+                                        d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 
+                                    1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838Zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634c3.169 0 3.92 
+                                    1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8c-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388Zm-5.5 
+                                    10.403h3.208V9.25H4.208v10.54ZM7.875 5.812a2.063 2.063 0 1 1-4.125 0a2.063 2.063 0 0 1 4.125 0Z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a  href="mailto:kbleulseged@gmail.com?subject=Mail from my Portfolio">kbleulseged@gmail.com</a>
+                        </section>
+                    </article>
+
+                     <form id="msg_form" method="POST" class="reveal fade-left">
                         <label for="name">Name *</label>
                         <input type="text" name="name" id="name" placeholder="Name" required="required" >
                         <label for="email">Email *</label>
                         <input type="email" name="email" id="email" placeholder="Email" required="required" >
                         <label for="message">Message *</label>
-                        <textarea cols="30" rows="7" name="message" placeholder="Your Message" required="required" ></textarea>
-                        <input type="submit" value="Send Message" id="send">
+                        <textarea cols="30" rows="7" id="message" name="message" placeholder="Your Message" required="required" ></textarea>
+                        <input type="submit" value="Send Message" id="send" >
+
+                        <div id="loading_container"><img src="./img/loading2.gif" alt="loading" id="loading_img" /></div>
+                        <p id="send_result"></p>
+
                     </form>
-                    
                 </div>
             </section>
         </section>
@@ -426,14 +425,14 @@
                 document.getElementById("show_sidemenu-btn--wrapper---contact").classList.remove("show_sidemenu-btn--wrapper");
                 document.getElementById("show_sidemenu-btn--wrapper---contact").classList.add("show_sidemenu-btn--wrapper---active");
 
-                document.getElementById("contacts_icons-container").classList.remove("contacts_icons-container");
-                document.getElementById("contacts_icons-container").classList.add("contacts_icons-container--col");
+                // document.getElementById("contacts_icons-container").classList.remove("contacts_icons-container");
+                // document.getElementById("contacts_icons-container").classList.add("contacts_icons-container--col");
             } else {
                 document.getElementById("show_sidemenu-btn--wrapper---contact").classList.remove("show_sidemenu-btn--wrapper---active");
                 document.getElementById("show_sidemenu-btn--wrapper---contact").classList.add("show_sidemenu-btn--wrapper");
 
-                document.getElementById("contacts_icons-container").classList.remove("contacts_icons-container--col");
-                document.getElementById("contacts_icons-container").classList.add("contacts_icons-container");
+                // document.getElementById("contacts_icons-container").classList.remove("contacts_icons-container--col");
+                // document.getElementById("contacts_icons-container").classList.add("contacts_icons-container");
 
         }
         }
@@ -479,6 +478,36 @@
         document.getElementById("next").addEventListener("click", () => { showNextProjects("next"); })
         document.getElementById("previous").addEventListener("click", () => { showNextProjects("previous"); })
         document.getElementById("previous").checked = true; 
+
+        document.getElementById("msg_form").addEventListener("submit" , async (e) => {
+            e.preventDefault()
+            document.getElementById("loading_container").style.display = "flex"
+            document.getElementById("send").style.display = "none"
+
+            axios.post('https://portfolio-api.cyclic.app/api/sendMessage', {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                msg: document.getElementById("message").value,
+            })
+             .then(response => {      
+                document.getElementById("name").value = ""
+                document.getElementById("email").value = ""
+                document.getElementById("message").value = ""
+
+                    document.getElementById("loading_container").style.display = "none"
+                    document.getElementById("send").style.display = "flex"
+
+                    document.getElementById("send_result").style.display = "block"
+                    document.getElementById("send_result").innerHTML = response.data.msg, " Thank you"
+                    setTimeout(() => { document.getElementById("send_result").style.display = "none" }, 2000) 
+               })
+                .catch(function (error) {  
+                    document.getElementById("name").value = ""
+                    document.getElementById("email").value = ""
+                    document.getElementById("message").value = ""
+                    console.log(error);  
+                });
+        })
 
     </script>
 </body>

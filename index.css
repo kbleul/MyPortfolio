@@ -16,11 +16,16 @@ a {
 }
 
 .flex { display: flex; }
+
 .main_cotainer {
     height: 100vh;
     background-image: url("./img/chalk.jpg");
     display: flex;
+    overflow-y : hidden;
 }
+
+.main_cotainer:hover { overflow-y : scroll; }
+
 
 .intro {
   width: 70%;
@@ -29,6 +34,7 @@ a {
 
 .intro .myname { 
     background-image: linear-gradient( -225deg, #b31275 0%, #f0a500 15%, #9055cf 29%, #c813ff 67%, #0059ff 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200% auto;
@@ -217,8 +223,12 @@ nav a:hover { color: white; }
 .main_cotainer-skills { 
     height: 100vh;
     background-color: #000000;
-    padding-top: 5%;
+    padding-top: 3%;
+    overflow-y : hidden;
 }
+
+.main_cotainer-skills:hover { overflow-y : scroll; }
+
 
 .main_cotainer-skills h2 {
     font-size: 3.5rem;
@@ -326,6 +336,7 @@ nav a:hover { color: white; }
 
 .skill_title { 
     font-family: 'Roboto Mono', monospace;
+    font-size: .8rem;
 }
 
 @keyframes spin {
@@ -358,9 +369,12 @@ nav a:hover { color: white; }
 .main_container-projects {
     height: 100vh;
     background: linear-gradient(#000,#212428);
-    margin-top: 7%;
-
+    margin-top: 5%;
+    overflow-y : hidden;
 }
+
+.main_container-projects:hover { overflow-y : scroll; }
+
 
 .active.fade-right { animation: fade-right 1s ease-in;  }
 @keyframes fade-right {
@@ -473,8 +487,11 @@ nav a:hover { color: white; }
     height: 100vh;
     background-color: #333538;
     background: linear-gradient(#000, #333538);
-    margin-top: 4rem;
+    margin-top: 2rem;
+    overflow-y : hidden;
 }
+
+.main_container-contact:hover { overflow-y : scroll; }
 
 .sidemenu_container {
     height: 95vh;
@@ -503,6 +520,7 @@ nav a:hover { color: white; }
     width: 60%;
     display: flex;
     flex-direction: column;
+    padding-top: 5%;
 }
 .form_container label {
     color: white;
@@ -513,19 +531,24 @@ nav a:hover { color: white; }
     
 }
 
+.flex-contact {
+    display: flex;
+    justify-content: end;
+}
+
 .contacts_icons-container{
-    width: 40%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-size: 1.1rem;
-    color: rgb(206, 147, 0);
+    color: rgb(255, 242, 211);
+    margin-top: 10%;
 }
 
 .contacts_icons-container--col {
     width: 40%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     font-size: 1.1rem;
@@ -584,6 +607,11 @@ footer p {
     text-align: center;
     font-size: .8rem;
     color: lightgray;
+}
+
+.contact-avater-cont { 
+    flex-direction: column;
+    justify-content: center
 }
 
 /*---------------------------------*/
@@ -717,7 +745,7 @@ footer p {
         width: 2.2rem;
         height: 100%;
       }
-    .skill_title { font-size: 1rem; padding-bottom: 10%;}
+    .skill_title { font-size: .8rem; padding-bottom: 10%;}
     .secondary {
         grid-row-start: 4;
         grid-column-start: 1;
