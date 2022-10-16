@@ -96,7 +96,7 @@ const DETAILS = {
     let TEMP_STORAGE
 
 const showDetails = index => {
-
+console.log("new")
     const htmlobj = document.getElementsByClassName("program_card")[index];
         const title = document.createElement("h3")
         const tech = document.createElement("p")
@@ -106,6 +106,7 @@ const showDetails = index => {
 
             title.innerHTML =  htmlobj.querySelector("h3").innerHTML
             tech.innerHTML =  htmlobj.querySelector("p").innerHTML
+            console.log("new")
 
     if(DETAILS[index]) {
 
@@ -120,6 +121,7 @@ const showDetails = index => {
             const img2 = document.createElement("img") 
             const img3 = document.createElement("img") 
             const img4 = document.createElement("img") 
+            console.log("new")
 
         const imgarr = [img1 , img2 , img3 , img4]
 
@@ -129,6 +131,7 @@ const showDetails = index => {
 
             divimgs.appendChild(imgarr[i])
         }
+        console.log("new")
 
         const linkbtn = document.createElement("a")
 
@@ -140,6 +143,7 @@ const showDetails = index => {
             divimgs.appendChild(linkbtn)
 
             let p_sec = document.createElement("section")
+            console.log("new")
 
             for(let i = 0 ; i < DETAILS[index].discription.length ; i++)
                   {
@@ -156,6 +160,7 @@ const showDetails = index => {
             div.appendChild(p_sec)
 
         const article = document.createElement("article")
+        console.log("new")
 
         article.id = "project_disc"
 
@@ -166,16 +171,17 @@ const showDetails = index => {
           document.getElementsByClassName("program_main-wrapper")[i].classList.add("projects_hidden")
     }
 
-        document.getElementById("program_btns-section").style.display = "none"
+        document.getElementById("program_btns-section").classList.add("flex_btns_hidden")
         document.getElementById("skills_article").appendChild(article)
 
         backbtn.addEventListener("click" , () => {
         document.getElementById("skills_article").removeChild( document.getElementById("project_disc"))
 
         document.getElementsByClassName("program_main-wrapper")[0].classList.remove("projects_hidden")
-        document.getElementById("program_btns-section").style.display = "flex"
+        document.getElementById("program_btns-section").classList.add("flex_btns")
         })
 
     }
+    console.log("new")
 
 }

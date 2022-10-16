@@ -15,7 +15,10 @@ a {
     color: inherit;
 }
 
-.flex { display: flex; }
+.flex,
+.flex_btns { display: flex; }
+
+.flex_btns_hidden { display: none; }
 
 .main_cotainer {
     height: 100vh;
@@ -627,6 +630,14 @@ footer p {
         order: 1;
     }
 
+    #aboutme_p { 
+        width: 100%;
+        padding-left: 2%;
+        padding-right: 10%;
+    }
+
+    .program_card { height: 21rem; }
+
     nav {
         width: 100%;
         justify-content: space-evenly;
@@ -694,7 +705,12 @@ footer p {
     @keyframes MoveUpDown {  0%,50% { padding-top: 1rem; }  }
 
     /**************Skills-----------------------*/
-    #skills { flex-direction: column; }
+    #skills, 
+    #main_container-projects,
+    #main_container-contacts,
+    #second_contacts_container,
+    .flex-contact  { flex-direction: column; }
+
     .sidemenu { 
         width: 100%;
         flex-direction: row;
@@ -720,7 +736,7 @@ footer p {
     .skills_card-main--container { width: 100%; }
 
     .main_cotainer-skills h2 { 
-        margin-top: 10%;
+        margin-top: 30%;
         margin-bottom: 15%; 
         font-size: 1.5rem; 
         text-align: center;
@@ -729,7 +745,6 @@ footer p {
         grid-template-columns: repeat(3, 1fr);
         gap: 10%;
         width: 90%;
-        margin-left: 5%;
     }
     .skill_card {
         width: 4rem;
@@ -752,6 +767,63 @@ footer p {
         grid-column-end: 3;
         font-size: 1.2rem;
     }
+
+    .program_title-wrapper h1 { font-size: 1.2rem; }
+
+    .main_container-projects { height: auto; }
+
+    .program_main-wrapper { display : block; }
+
+    .program_right { 
+        width: 98%;
+        margin-left: 1%;
+    }
+    .program_btns-section { display : none; }
+
+    .program_card { margin-top: 3rem; }
+
+    .program_card:last-of-type { margin-bottom: 15%; }
+
+    .form_container { 
+        width: 100%;
+        height: auto;
+    }
+
+    .form_container h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 15%;
+    }
+
+    #contacts_icons-container a { 
+        font-size: .8rem;
+        margin-bottom: 15%;
+    }
+
+    .form_container form { width: 100%; }
+
+    .contacts_container input, .contacts_container textarea { 
+        padding: .8rem;
+        margin-left: 3%;
+        width: 94%;
+    }
+
+    #send,
+    #send:hover  { 
+        width: 50%;
+        margin-left: 25%;
+        margin-bottom: 10%;
+    }
+
+    .form_container label { margin-top: 15%; }
+
+    .projects_hidden { display: none; }
+
+    #project_disc { flex-direction: column; }
+
+    .flex_btns { display: none; }
+
+
 
 
 
