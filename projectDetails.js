@@ -96,7 +96,7 @@ const DETAILS = {
     let TEMP_STORAGE
 
 const showDetails = index => {
-console.log("new")
+
     const htmlobj = document.getElementsByClassName("program_card")[index];
         const title = document.createElement("h3")
         const tech = document.createElement("p")
@@ -106,7 +106,7 @@ console.log("new")
 
             title.innerHTML =  htmlobj.querySelector("h3").innerHTML
             tech.innerHTML =  htmlobj.querySelector("p").innerHTML
-            console.log("new")
+            
 
     if(DETAILS[index]) {
 
@@ -121,7 +121,7 @@ console.log("new")
             const img2 = document.createElement("img") 
             const img3 = document.createElement("img") 
             const img4 = document.createElement("img") 
-            console.log("new")
+            
 
         const imgarr = [img1 , img2 , img3 , img4]
 
@@ -131,7 +131,7 @@ console.log("new")
 
             divimgs.appendChild(imgarr[i])
         }
-        console.log("new")
+        
 
         const linkbtn = document.createElement("a")
 
@@ -143,7 +143,7 @@ console.log("new")
             divimgs.appendChild(linkbtn)
 
             let p_sec = document.createElement("section")
-            console.log("new")
+            
 
             for(let i = 0 ; i < DETAILS[index].discription.length ; i++)
                   {
@@ -160,28 +160,37 @@ console.log("new")
             div.appendChild(p_sec)
 
         const article = document.createElement("article")
-        console.log("new")
+        
 
         article.id = "project_disc"
 
         article.appendChild(div)
         article.appendChild(divimgs)
 
-      for(let i = 0 ; i < document.getElementsByClassName("program_main-wrapper").length ; i++) {  
-          document.getElementsByClassName("program_main-wrapper")[i].classList.add("projects_hidden")
-    }
+          document.getElementsByClassName("program_main-wrapper")[0].classList.add("projects_hidden")
+          document.getElementsByClassName("program_main-wrapper")[1].classList.add("projects_hidden")
+
+    
 
         document.getElementById("program_btns-section").classList.add("flex_btns_hidden")
         document.getElementById("skills_article").appendChild(article)
 
         backbtn.addEventListener("click" , () => {
-        document.getElementById("skills_article").removeChild( document.getElementById("project_disc"))
+            document.getElementById("skills_article").removeChild( document.getElementById("project_disc"))
 
-        document.getElementsByClassName("program_main-wrapper")[0].classList.remove("projects_hidden")
-        document.getElementById("program_btns-section").classList.add("flex_btns")
+            if(document.getElementById('previous').checked) {
+                document.getElementsByClassName("program_main-wrapper")[0].classList.remove("projects_hidden")
+                 document.getElementById("program_btns-section").classList.add("flex_btns")
+              }else if(document.getElementById('next').checked) {
+                document.getElementsByClassName("program_main-wrapper")[1].classList.remove("projects_hidden")
+                 document.getElementById("program_btns-section").classList.add("flex_btns")
+              }
+
+             document.getElementById("program_btns-section").classList.remove("flex_btns_hidden")
+
         })
 
     }
-    console.log("new")
+    
 
 }
