@@ -440,10 +440,6 @@
         document.getElementById("show_sidemenu-project").addEventListener("click", () => showSideMenu("projects"));
         document.getElementById("show_sidemenu-contact").addEventListener("click", () => showSideMenu("contacts"));
 
-        for(let i = 0 ; i < document.getElementsByClassName("resume_btn").length ; i++) {
-            document.getElementsByClassName("resume_btn")[i].addEventListener("click", downloadResume);
-        }
-        
 
         const downloadResume = () => {
             axios.get('https://portfolio-api.cyclic.app/api/resume/download')
@@ -452,6 +448,14 @@
 
 
         }
+
+        
+        for(let i = 0 ; i < document.getElementsByClassName("resume_btn").length ; i++) {
+            document.getElementsByClassName("resume_btn")[i].addEventListener("click", downloadResume);
+        }
+        
+
+      
 
     const showNextProjects = (type) => {
           if( type === "next") { 
