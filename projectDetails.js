@@ -11,7 +11,7 @@ const DETAILS = {
 
          `- How to implement web sockets to allow real time chat and notification` ,
          `- Advance React and Node JS best practices, file structures and hooks`,
-         `- Creating a beautify user interface using tailwind`,
+         `- Creating a beautiful user interface using tailwind`,
          `- How to implement web socet `,
          `- How to host a full stack project`,
          `- Authentication and authorization using web tokens`,
@@ -26,7 +26,7 @@ const DETAILS = {
 
     1 : { 
         title : "Morbik-Fitness",
-        discription : [`This project utilized exerciseDB api from rapid api to show diffrent exercises. The exercises can be filtered and searched by different body parts. It also suggest d/t youtube videos that are similar to the current exercise by using the Youtube Search and Download api, also found in rapid api.`,
+        discription : [`This project utilized exerciseDB api from rapid api to show different exercises. The exercises can be filtered and searched by different body parts. It also suggests d/t youtube videos that are similar to the current exercise by using the Youtube Search and Download api, also found in rapid api.`,
         `Has a dark mode option and is fully responsive `,``,``,
 
        `What did i learn more about by building this project ?`,
@@ -34,7 +34,7 @@ const DETAILS = {
          `- React building custom hooks` ,
          `- Advanced React Best Practices such as file structure and hooks`,
          `- Creating a beautiful user interface using the Material UI (version 5)`,
-         `- Fetching data from unlimited sources using RapidAPI`],
+         `- Fetching data from unlimited sources using Rapid API`],
 
         imgs : ["img/project_imgs/fitness.png","img/project_imgs/fitness1.png","img/project_imgs/fitness2.png","img/project_imgs/fitness3.png"] , 
 
@@ -43,15 +43,15 @@ const DETAILS = {
 
     2 : {
         title : "Morbik-Recipe",
-        discription : [`This project utilized TheMealDB and CocktailDB  APIs to show diffrent recipes from around the world. The exercises can be filtered  different catagories. It also suggest d/t subreddits that are mainly about foodor cocktails..`,
+        discription : [`This project utilized TheMealDB and CocktailDB  APIs to show different recipes from around the world. The exercises can be filtered  different categories. It also suggests d/t subreddits that are mainly about food or cocktails..`,
         `Has a dark mode functionality and user can also save their favorite recipes and subreddits. The site is fully responsive `,``,``,
 
        `What did i learn more about by building this project ?`,
 
          `- A deeper understanding if react routers` ,
-         `-  A deeper understanding on managing states globaly using useContext hook`,
+         `-  A deeper understanding on globally managing states using useContext and useReducer hooks`,
          `- Creating a beautiful user interface using tailwindcss`,
-         `- Using local storage to persist aved data`,
+         `- Using local storage to persist data`,
          `- Fetching data from unlimited sources using APIs`
         ],
 
@@ -62,8 +62,8 @@ const DETAILS = {
 
      3 : {
         title : "Morbik-Movies",
-        discription : [`This project utilized theMovieDB api show different movies and series and user can get a movie recomendation based on a similar movies thry have seen before. The movies can be filtered and searched by movie title. It also suggest d/t movie subreddits that discuss movies by using the reddit api, also found in rapid api.`,
-        `It's fully responsive `,``,``,
+        discription : [`This project utilized theMovieDB api show different movies and series and user can get a movie recommendation based on a similar movie they have seen before. The movies can be filtered and searched by movie title. It also suggests d/t movie subreddits that discuss movies by using the reddit api, also found in rapid api.`,
+        `It's fully responsive. `,``,``
 
         ,`What did i learn more about by building this project ?`,
 
