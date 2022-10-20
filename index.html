@@ -442,14 +442,14 @@
 
 
         const downloadResume = () => {
-            axios.get('https://portfolio-api.cyclic.app/api/resume/download')
+            axios.get('https://portfolio-api.cyclic.app/files/resume.pdf')
              .then(response => { console.log(response)     })
                 .catch(function (error) { console.log(error)  })
 
 
         }
 
-        
+
         for(let i = 0 ; i < document.getElementsByClassName("resume_btn").length ; i++) {
             document.getElementsByClassName("resume_btn")[i].addEventListener("click", downloadResume);
         }
