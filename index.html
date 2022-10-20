@@ -41,7 +41,7 @@
                 <a href="#main_container-projects">Projects</a>
                 <a href="#main_container-contacts">Contact</a>
 
-                <a>Resume</a>
+                <button class="resume_btn">Resume</button>
             </nav>
 
             <div class="main_contact-wrapper">
@@ -440,7 +440,18 @@
         document.getElementById("show_sidemenu-project").addEventListener("click", () => showSideMenu("projects"));
         document.getElementById("show_sidemenu-contact").addEventListener("click", () => showSideMenu("contacts"));
 
+        for(let i = 0 ; i < document.getElementsByClassName("resume_btn").length ; i++) {
+            document.getElementsByClassName("resume_btn")[i].addEventListener("click", downloadResume);
+        }
         
+
+        const downloadResume = () => {
+            axios.get('https://portfolio-api.cyclic.app/api/resume/download')
+             .then(response => { console.log(response)     })
+                .catch(function (error) { console.log(error)  })
+
+
+        }
 
     const showNextProjects = (type) => {
           if( type === "next") { 
