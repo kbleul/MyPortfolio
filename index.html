@@ -442,9 +442,10 @@
 
 
         const downloadResume = () => {
-            axios.get('https://portfolio-api.cyclic.app/api/resume/download')
-             .then(response => { console.log(response)     })
-                .catch(function (error) { console.log(error)  })
+          const response = axios.get('https://portfolio-api.cyclic.app/download', { responseType: 'blob' })
+
+            const file = window.URL.createObjectURL(new Blob([response.data]));
+            window.open(file);
         }
 
 
