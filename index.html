@@ -442,7 +442,7 @@
 
 
         const downloadResume = () => {
-            axios.get('https://portfolio-api.cyclic.app/files/resume.pdf')
+            axios.get('https://portfolio-api.cyclic.app/api/resume/download')
              .then(response => { console.log(response)     })
                 .catch(function (error) { console.log(error)  })
         }
