@@ -972,7 +972,7 @@ footer p {
         width: 90%;
     }
     .skill_card {
-        width: 4rem;
+        width: auto;
         height: 100%;
         font-size: 2rem;
         margin-left: 0;
